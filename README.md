@@ -58,6 +58,7 @@ The focus is on **real-world data handling**, not toy examples.
 
 ## Project Structure
 
+```
 resume_screening_ml/
 │
 ├── data/
@@ -81,6 +82,7 @@ resume_screening_ml/
 │
 ├── requirements.txt
 └── README.md
+```
 
 
 ---
