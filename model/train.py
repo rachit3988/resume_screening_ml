@@ -62,7 +62,7 @@ def main():
 
     LOGGER.info("Training Logistic Regression model")
     model = LogisticRegression(
-       max_iter=2000,
+        max_iter=3000,
         class_weight="balanced",
         solver="saga"
     )

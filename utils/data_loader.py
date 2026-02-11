@@ -16,6 +16,10 @@ def load_and_clean_data(
     # Normalize labels
     df["Category"] = df["Category"].str.strip().str.upper()
 
+    # Remove obviously corrupted labels
+    df = df[df["Category"].str.len() < 40]
+    df = df[df["Category"].str.contains(r"^[A-Z\- ]+$", regex=True)]
+
     # Clean resume text
     df["cleaned_resume"] = df["Resume"].apply(clean_text)
 
